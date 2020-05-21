@@ -1,5 +1,5 @@
 {
-  "name": "geoProjTemplate",
+  "name": "geoprojtemplate",
   "version": "1.0.0",
   "description": "This is a template for creating a new Geogebra web app",
   "main": "index.js",
