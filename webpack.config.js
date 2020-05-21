@@ -11,13 +11,13 @@ module.exports = {
     devtool: 'inline-source-map',
     devServer: {
         contentBase: './dist',
-    }
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Enter Title!!!',
+            filename: 'index.html',
             template: './src/index.html'
-        }),
+        })
     ],
     module: {
         rules: [
