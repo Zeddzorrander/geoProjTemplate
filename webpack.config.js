@@ -4,6 +4,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/js/index.js',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+    },
     devtool: 'inline-source-map',
     devServer: {
         contentBase: './dist',
@@ -12,12 +16,9 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'Enter Title!!!',
+            template: './src/index.html'
         }),
     ],
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
     module: {
         rules: [
             {
@@ -30,6 +31,13 @@ module.exports = {
             {
                 test:/deployggb.js$/,
                 use: [ 'script-loader' ],
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                },
             },
         ],
     },
