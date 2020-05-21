@@ -2,3 +2,4 @@ node_modules
 src/js/Geogebra
 dist.zip
 dist
+.DS_Store
