@@ -65,6 +65,6 @@ export const parameters = {
     // is3D=is 3D applet using 3D view, AV=Algebra View, SV=Spreadsheet View, CV=CAS View, EV2=Graphics View 2, CP=Construction Protocol, PC=Probability Calculator DA=Data Analysis, FI=Function Inspector, macro=Macros
 export const views = {'is3D': 0,'AV': 0,'SV': 0,'CV': 0,'EV2': 0,'CP': 0,'PC': 0,'DA': 0,'FI': 0,'macro': 0};
 
-export function ggbFunctionf(x) {
-    return 0.05 * (x + 4) * (x - 1) * (x - 5);
-};
+// export function ggbFunctionf(x) {
+//     return 0.05 * (x + 4) * (x - 1) * (x - 5);
+// };

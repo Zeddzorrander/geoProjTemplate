@@ -32,13 +32,16 @@ module.exports = {
                 test:/deployggb.js$/,
                 use: [ 'script-loader' ],
             },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                },
-            },
+            // {
+            //    // test:
+            // }
+            // {
+            //     test: /\.js$/,
+            //     exclude: /node_modules/,
+            //     use: {
+            //         loader: 'babel-loader',
+            //     },
+            // },
         ],
     },
 };
