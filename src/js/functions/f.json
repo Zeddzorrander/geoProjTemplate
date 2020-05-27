@@ -32,6 +32,5 @@
             "value": "undefined"
         }
     ],
-    "implicit": false,
-    "depVar": "g"
+    "implicit": false
 }
