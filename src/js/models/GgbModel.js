@@ -1,7 +1,7 @@
 import '../Geogebra/deployggb';
 
-export class GgbFunction {
-    constructor(name, formula, indVar = 'x', points = [], discontinuities = [], implicit = false, depVar) {
+export default class GgbFunction {
+    constructor({name, formula, indVar = 'x', points = [], discontinuities = [], implicit = false, depVar}) {
         this.name = name;
         this.formula = formula;
         this.points = points;
@@ -25,7 +25,7 @@ export class GgbFunction {
                 ggbApplet.evalCommand(`${el.name} = (${el.x}, ${el.y})`);
                 ggbApplet.setPointStyle(el.name, el.style);
                 ggbApplet.setPointSize(el.name, el.size);
-                ggbApplet.setColor(el.name, el.color);
+                ggbApplet.setColor(el.name, el.colorR, el.colorG, el.colorB);
             });
         }
     }
