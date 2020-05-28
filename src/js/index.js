@@ -1,16 +1,14 @@
-//import './Geogebra/deployggb';
-//require("imports-loader?GGBApplet=GGBapplet!./Geogebra/deployggb.js");
+// import any functions from their j.son files and any other modules needed
 import functF from './functions/f.json'
 import functG from './functions/g.json';
 import imp from './functions/implicit.json';
 import { GgbFunction } from './models/GgbModel';
 import { parameters, views } from './configGeo';
 
-import $ from 'jquery';
 
 
 
-
+// create ggb functions for each json file -- need to each applet as a GgbFunction
 let f = new GgbFunction(functF);
 let g = new GgbFunction(functG);
 let implicit = new GgbFunction(imp);
@@ -21,23 +19,21 @@ implicit.applet = new GGBApplet(parameters, '5.0', views);
 function draw() {
     f.draw();
     g.draw();
-    
-    // implicit.draw();
-    //console.log(g.points.length);
-    //document.getElementById('hidden').style.display = 'none';
+    implicit.draw();
 }
 
 function test() {
-    //console.log(f.relMin(2, 4));
-    //console.log(g.relMax(0, 2));
     console.log(g.relMin(0, 2));
 }
 
 function erase() {
-   // console.log(g.name);
     g.erase();
     implicit.erase();
     f.erase();
+}
+
+function initializeGGB() {
+    document.getElementById('initGgb').click();
 }
 
 window.onload = function() {
@@ -47,6 +43,7 @@ window.onload = function() {
     document.getElementById('initGgb').addEventListener('click', draw);
     document.getElementById('erase').addEventListener('click', erase);
     document.getElementById('test').addEventListener('click', test);
+    initializeGGB();
     
 };
 
