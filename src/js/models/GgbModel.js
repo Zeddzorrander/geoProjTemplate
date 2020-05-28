@@ -19,6 +19,7 @@ export class GgbFunction {
     
     erase() {
         ggbApplet.deleteObject(this.name);
+        ggbApplet.setAxisLabels(1, ``, ``);
         if (this.points.length > 0) {
             this.points.forEach(el => ggbApplet.deleteObject(el.name));
         }
@@ -27,13 +28,19 @@ export class GgbFunction {
     draw() {
         if (!this.implicit) {
             ggbApplet.evalCommand(`${this.name} = ${this.formula}`);
-        } else ggbApplet.evalCommand(this.formula);
-        ggbApplet.setColor(this.name, this.colorR, this.colorG ,this.colorB);
-        ggbApplet.setLineThickness(this.name, this.size);
-        ggbApplet.setCaption(this.name, `$${this.name}(x)$`);
-        ggbApplet.setLabelStyle(this.name, 3);
-        ggbApplet.setLabelVisible(this.name, true);
-        ggbApplet.setAxisLabels(1, `$${this.indVar}$`, `${this.depVar}`);
+            ggbApplet.setColor(this.name, this.colorR, this.colorG ,this.colorB);
+            ggbApplet.setLineThickness(this.name, this.size);
+            ggbApplet.setCaption(this.name, `$${this.name}(x)$`);
+            ggbApplet.setLabelStyle(this.name, 3);
+            ggbApplet.setLabelVisible(this.name, true);
+            ggbApplet.setAxisLabels(1, `$${this.indVar}$`, `${this.depVar}`);
+        } else {
+            ggbApplet.evalCommand(`${this.name}: ${this.formula}`);
+            ggbApplet.setColor(this.name, this.colorR, this.colorG ,this.colorB);
+            ggbApplet.setLineThickness(this.name, this.size);
+            ggbApplet.setLabelVisible(this.name, false);
+            ggbApplet.setAxisLabels(1, `$${this.indVar}$`, `${this.depVar}`);
+        }
         if (this.points.length > 0) {
             this.points.forEach(el => {
                 ggbApplet.evalCommand(`${el.name} = (${el.x}, ${el.y})`);
