@@ -1,6 +1,10 @@
 {
     "name": "g",
     "formula": "If(x < 2, -(x - 2)² + 4, x > 2, -(x - 2)² + 4)",
+    "colorR": 0,
+    "colorG": 0,
+    "colorB": 0,
+    "size": 7,
     "indVar": "x",
     "points": [
         {
