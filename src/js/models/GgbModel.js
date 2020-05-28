@@ -70,21 +70,26 @@ export class GgbFunction {
                    alert('There is a discontinuity!  Please try a different interval');
                 }
             });
+            return relMaxPt.relMax;
         } else return relMaxPt.relMax;
     }
 
     // if function is monotonic on (leftEndPt, rightEndPt), this will return an endpoint.  Otherwise returns the relMin
     relMin(leftEndPt, rightEndPt) {
         const relMinPt = this.getRelExtreme(leftEndPt, rightEndPt, 'Min');
+        console.log(relMinPt);
         if (this.discontinuities.length > 0) {
             this.discontinuities.forEach(el => {
                 if (el.x == relMinPt.relMinLoc) {
                    alert('There is a discontinuity!  Please try a different interval');
                 }
             });
-        } else return relMinPt.relMin;
+            return relMinPt.relMin;
+        } else {
+            return relMinPt.relMin;
+        }
     }
-    
+
     // type is 'Max' or 'Min'.  This is an internal helper function
     getRelExtreme(leftEndpt, rightEndpt, type) {
         ggbApplet.evalCommand(`rel${type} = ${type}(${this.name},${leftEndpt},${rightEndpt})`);
@@ -94,8 +99,8 @@ export class GgbFunction {
             const relMaxLoc = Math.round(100000 * parseFloat(ggbApplet.getXcoord('relMax'))) / 100000;
             return { relMaxLoc, relMax };
         } else {
-            const relMin = Math.round(100000 * parseFloat(ggbApplet.getYcoord('relMax'))) / 100000;
-            const relMinLoc = Math.round(100000 * parseFloat(ggbApplet.getXcoord('relMax'))) / 100000;
+            const relMin = Math.round(100000 * parseFloat(ggbApplet.getYcoord('relMin'))) / 100000;
+            const relMinLoc = Math.round(100000 * parseFloat(ggbApplet.getXcoord('relMin'))) / 100000;
             return { relMinLoc, relMin };
             
         }

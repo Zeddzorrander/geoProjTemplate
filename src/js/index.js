@@ -20,26 +20,34 @@ implicit.applet = new GGBApplet(parameters, '5.0', views);
 
 function draw() {
     f.draw();
-    console.log(f.relMax(-3, -1));
+    g.draw();
+    
     // implicit.draw();
     //console.log(g.points.length);
     //document.getElementById('hidden').style.display = 'none';
+}
+
+function test() {
+    //console.log(f.relMin(2, 4));
+    //console.log(g.relMax(0, 2));
+    console.log(g.relMin(0, 2));
 }
 
 function erase() {
    // console.log(g.name);
     g.erase();
     implicit.erase();
+    f.erase();
 }
 
 window.onload = function() {
-    console.log(g);
     f.applet.inject('ggbApplet', 'preferHTML5');
     g.applet.inject('ggbApplet', 'preferHTML5');
     implicit.applet.inject('ggbApplet', 'preferHTML5');
     document.getElementById('initGgb').addEventListener('click', draw);
     document.getElementById('erase').addEventListener('click', erase);
-   
+    document.getElementById('test').addEventListener('click', test);
+    
 };
 
 g.applet.setPreviewImage('data:image/gif;base64,R0lGODlhAQABAAAAADs=','https://www.geogebra.org/images/GeoGebra_loading.png','https://www.geogebra.org/images/applet_play.png');
