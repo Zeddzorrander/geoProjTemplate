@@ -1,40 +1,12 @@
 {
-    "name": "g",
-    "formula": "If(x < 2, -(x - 2)² + 4, x > 2, -(x - 2)² + 4)",
+    "name": "f",
+    "formula": "0.05 (x + 4) (x - 1) (x - 5)",
     "colorR": 0,
     "colorG": 0,
     "colorB": 0,
     "size": 7,
     "indVar": "x",
-    "points": [
-        {
-            "x": 2,
-            "y": 4,
-            "name": "A",
-            "style": 2, 
-            "colorR": 0, 
-            "colorG": 0, 
-            "colorB": 0, 
-            "size": 5
-        },
-        {
-            "x": 2,
-            "y": 4,
-            "name": "B",
-            "style": 0, 
-            "colorR": 255, 
-            "colorG": 255, 
-            "colorB": 255, 
-            "size": 4
-        }
-    ],
-    "discontinuities": [
-        {
-            "x": 2,
-            "y": 4,
-            "type": "hole",
-            "value": "undefined"
-        }
-    ],
+    "points": [],
+    "discontinuities": [],
     "implicit": false
 }
