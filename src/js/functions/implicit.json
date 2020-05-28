@@ -1,0 +1,24 @@
+{
+    "name": "implicit",
+    "formula": "x^3 - 6*x*y + y^3 = 0",
+    "colorR": 0,
+    "colorG": 0,
+    "colorB": 0,
+    "size": 7,
+    "indVar": "x",
+    "points": [
+        {
+            "x": "4/3",
+            "y": "8/3",
+            "name": "A",
+            "style": 0, 
+            "colorR": 0, 
+            "colorG": 0, 
+            "colorB": 0, 
+            "size": 5
+        }
+    ],
+    "discontinuities": [],
+    "implicit": true,
+    "depVar": "y"
+}
