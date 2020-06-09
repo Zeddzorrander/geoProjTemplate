@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title></title>
 </head>
 <body>
-    <div id="main">
-        <h1>Math 1151 - Calculus I</h1>
-        <div id="instructions">Enter instructions here</div>
-        <div id="user_input1"></div>
+    <header>
+        <h1>Calculus I</h1>
+    </header>
+
+    <main>
+        <section class="directions">Enter general directions here.</section>
+        <nav>
+            <ul>
+                <li>Add buttons for each problem here</li>
+            </ul>
+        </nav>
+        <section class="input" id="user_input1">
+            <h2>User Input</h2>
+            <p>Space for users to input functions or other information to start geogebra app.</p>
+        </section>
         <div id="ggbApplet"></div>
-        <div id="user_input2"></div>
-        <div id="outputDiv"></div>
-        <div id="hidden" >
-            <button id="initGgb">InitializeGGB</button>
-            <button id="erase">Erase GGB</button>
-            <button id="test">Test</button>
-        </div>
-    </div>
+        <section class="input" id="user_input2">
+            <h2>User Input</h2>
+            <p>Space for users to enter problem/function specific information that geogebra will react to.</p>
+        </section>
+        <section class="output" id="feedback">
+            <h2>Feedback</h2>
+            <p>Place where content will be output from geogebra app</p>
+        </section>
+    </main>
+    <footer>Space for created by and acknowledgements if using others lesson framworks.</footer>
 </body>
 </html>
