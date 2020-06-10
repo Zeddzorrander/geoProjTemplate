@@ -1,19 +1,74 @@
-button, 
-input, 
-select, 
-textarea { 
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font: 1.2em;
+    margin: 0 auto;
+
+}
+
+h1,
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+article {
+    margin: 0 auto;
+}
+
+header {
+    margin: 0 0 1em;
+    background-image: url(images/derivative.svg), url(images/integral.svg), linear-gradient(black, darkblue, blue, darkblue, black);
+    background-repeat: no-repeat;
+    background-position: 10% center, 90% center;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+footer {
+    text-align: right;
+    padding-right: 1em;
+    margin: 1em auto;
+}
+
+button { 
     font-family: inherit; 
     font-size: 100%; 
     box-sizing: border-box; 
-    padding: 0; margin: 0; 
+    padding: 10px; margin: 0.5em; 
+    border-radius: 10px;
+    box-shadow: none;
+
+    
 } 
+
+ nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+ }
+
 
 textarea { 
     overflow: auto;
 }
 
+.wrapper {
+    margin-left: 1em;
+}
+.directions {
+    margin-left: 1em;
+}
 #ggbApplet {
     width: 600px;
     height: 400px;
     border: 2px solid black;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
 }

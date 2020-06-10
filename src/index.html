@@ -12,25 +12,37 @@
     </header>
 
     <main>
-        <section class="directions">Enter general directions here.</section>
-        <nav>
-            <ul>
-                <li>Add buttons for each problem here</li>
-            </ul>
-        </nav>
-        <section class="input" id="user_input1">
-            <h2>User Input</h2>
-            <p>Space for users to input functions or other information to start geogebra app.</p>
-        </section>
-        <div id="ggbApplet"></div>
-        <section class="input" id="user_input2">
-            <h2>User Input</h2>
-            <p>Space for users to enter problem/function specific information that geogebra will react to.</p>
-        </section>
-        <section class="output" id="feedback">
-            <h2>Feedback</h2>
-            <p>Place where content will be output from geogebra app</p>
-        </section>
+        <article>
+            <section class="directions">
+                <h2>General Directions</h2>
+                <p>Enter general directions here.</p>
+            </section>
+            <nav>
+                <ul>
+                    <li><button id="prob1">Problem 1</button></li>
+                    <li><button id="prob2">Problem 2</button></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class="wrapper">
+                    <section class="input" id="user_input1">
+                        <h2>User Input</h2>
+                        <p>Space for users to input functions or other information to start geogebra app.</p>
+                    </section>
+                    <div id="ggbApplet"></div>
+                </div>
+                <div class="wrapper">
+                    <section class="input" id="user_input2">
+                        <h2>User Input</h2>
+                        <p>Space for users to enter problem/function specific information that geogebra will react to.</p>
+                    </section>
+                    <section class="output" id="feedback">
+                        <h2>Feedback</h2>
+                        <p>Place where content will be output from geogebra app</p>
+                    </section>
+                </div>
+            </div>
+        </article>
     </main>
     <footer>Space for created by and acknowledgements if using others lesson framworks.</footer>
 </body>
