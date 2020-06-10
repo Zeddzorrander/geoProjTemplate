@@ -1,13 +1,17 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;;
     font: 1.2em;
     margin: 0 auto;
+    background-image: url(images/noise.png);
+    background-repeat: repeat;
 
 }
 
 h1,
 h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Cinzel',Copperplate, Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px grey;
 
 }
 
@@ -17,18 +21,26 @@ article {
 
 header {
     margin: 0 0 1em;
-    background-image: url(images/derivative.svg), url(images/integral.svg), linear-gradient(black, darkblue, blue, darkblue, black);
+    background-image: url(images/derivative.svg), url(images/integral.svg), linear-gradient(black, blue, black);
     background-repeat: no-repeat;
     background-position: 10% center, 90% center;
-    color: white;
     text-align: center;
     padding: 1em;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px black;
+    /*font-family: 'Metal Mania', cursive;*/
+    color: white;
 }
 
 footer {
     text-align: right;
     padding-right: 1em;
     margin: 1em auto;
+    border-top: 2px solid black;
+    padding-top: 1em;
 }
 
 button { 
@@ -38,9 +50,18 @@ button {
     padding: 10px; margin: 0.5em; 
     border-radius: 10px;
     box-shadow: none;
+    background-color: darkblue;
+    color: white;
+    border: 4px double cornflowerblue;
 
     
 } 
+
+button:hover {
+    background-color: cornflowerblue;
+    color: black;
+    border: 4px double darkblue;
+}
 
  nav ul {
     list-style: none;
@@ -58,10 +79,11 @@ textarea {
 }
 .directions {
     margin-left: 1em;
+    max-width: 700px;
 }
 #ggbApplet {
-    width: 600px;
-    height: 400px;
+    width: 800px;
+    height: 600px;
     border: 2px solid black;
 }
 
