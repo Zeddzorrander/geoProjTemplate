@@ -20,10 +20,13 @@ article {
 }
 
 header {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
     margin: 0 0 1em;
-    background-image: url(images/derivative.svg), url(images/integral.svg), linear-gradient(black, blue, black);
+    background-image: /*url(images/derivative.svg), url(images/integral.svg), */linear-gradient(black, blue, black);
     background-repeat: no-repeat;
-    background-position: 10% center, 90% center;
+    /*background-position: 10% center, 90% center;*/
     text-align: center;
     padding: 1em;
 }
@@ -31,8 +34,11 @@ header {
 header h1 {
     font-size: 3.5rem;
     text-shadow: 2px 2px 4px black;
-    /*font-family: 'Metal Mania', cursive;*/
     color: white;
+}
+
+header h1:nth-child(odd) {
+    font-size: 1.7rem;
 }
 
 footer {
