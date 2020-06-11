@@ -4,6 +4,7 @@ import functG from './functions/g.json';
 import imp from './functions/implicit.json';
 import { GgbFunction } from './models/GgbModel';
 import { parameters, views } from './configGeo';
+import '../styles.css';
 
 
 

@@ -32,6 +32,12 @@ module.exports = {
                 test:/deployggb.js$/,
                 use: [ 'script-loader' ],
             },
+            {
+                test:/\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader',
+                ],
+            },
             // {
             //    // test:
             // }
